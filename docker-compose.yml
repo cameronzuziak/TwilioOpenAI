@@ -1,0 +1,39 @@
+services:
+
+  nginx: 
+    build: ./nginx
+    container_name: nginx
+    depends_on:
+      - flaskapp
+    environment:
+      - SERVER_NAME=${SERVER_NAME}
+    restart: always
+    networks: 
+      - my-network
+    ports:
+      - 80:80
+      - 443:443
+
+  flaskapp:
+    build: ./flaskapp
+    container_name: flaskapp
+    env_file:
+      - .env
+    networks:
+      my-network:
+        aliases:
+          - flask-app
+    ports:
+      - 8000
+      - 6379
+
+  redis:
+    image: redis
+    container_name: redis-container
+    ports:
+      - 6379
+    networks: 
+      - my-network
+
+networks:
+  my-network:
