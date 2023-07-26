@@ -16,10 +16,12 @@ openai.api_key = OPEN_AI_KEY
 
 
 # function to chat with OpenAI
+# we set max tokens to 399 because twilio has a limit of 1600 characters (400 tokens)
 def chat(messages):
     completion = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
-        messages=messages
+        messages=messages,
+        max_tokens=399
     )
     return(completion.choices[0].message["content"])
 

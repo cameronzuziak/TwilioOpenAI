@@ -59,6 +59,16 @@ def sms_reply():
             msg = pickle.loads(r.get(str(from_number)))
             msg.append({"role": "user", "content": str(body)})
 
+
+        # Limit input to 2000 tokens, which is 8000 chars 
+        # remove the oldest messages item in message array until under 1600 
+        # (dont remove 1st item as it is system context)
+        i = len(str(msg))
+        while i > 8000:
+            msg.pop(2)
+            i = len(str(msg))
+
+
         # pass conversation context to gpt
         text = chat(messages=msg)
 
