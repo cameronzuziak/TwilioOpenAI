@@ -17,9 +17,9 @@ This project allows you to interact with OpenAI GPT models over SMS via Twilio's
 
 ## Set Up
 1. Once you've set up your twilio account and purchased a number, configure the web hook for that number in the twilio console to point to https://{your_domain}/api/chat for inbound messages, for more info look [here](https://www.twilio.com/docs/sms/tutorials/how-to-receive-and-reply-python#configure-your-webhook-url)
-2. Edit the '.env' file and fill in the corresponding variables with your api keys and data. Note that ORG_ID for OpenAI is only currently needed for GPT4 models. GPT3.5-turbo does not require it.
-3. 
-
+2. ```git clone https://github.com/cameronzuziak/TwilioOpenAI.git```
+3. Edit the '.env' file and fill in the corresponding variables with your api keys and data. Note that ORG_ID for OpenAI is only currently needed for GPT4 models. GPT3.5-turbo does not require it.
+4. ```docker compose up --build```
 
 
 ### Disclaimer
