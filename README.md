@@ -23,4 +23,4 @@ This project allows you to interact with OpenAI GPT models over SMS via Twilio's
 
 
 ### Disclaimer
-No Professional Association - This Software is an open-source application developed by Cameron Zuziak. I want to make it clear that the Software is not professionally associated with, endorsed, or sponsored by Twilio or OpenAI ("Providers"). I have developed this Software independently and all interactions or communication facilitated by the Software are solely your responsibility.
+No Professional Association - This Software is an open-source application developed by Cameron Zuziak. In using any services provided by this software, you understand that the Software is not professionally associated with, endorsed, or sponsored by Twilio or OpenAI ("Providers"). This Software has been developed independently and all interactions or communication facilitated by the Software are solely your responsibility.
